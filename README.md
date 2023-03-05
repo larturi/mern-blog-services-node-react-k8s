@@ -4,7 +4,6 @@
 - Frontend: React & Bootstrap
 - Infra: K8S
 
-<br />
 
 # Frontend
 
@@ -18,7 +17,6 @@ npm start
 
 Listening at <http://localhost:3000>
 
-<br />
 
 # Services
 
@@ -81,8 +79,6 @@ npm start
 ```
 
 Listening at <http://localhost:8000>
-
-<br />
 
 # Docker
 
