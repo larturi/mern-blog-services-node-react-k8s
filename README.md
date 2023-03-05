@@ -4,7 +4,6 @@
 - Frontend: React & Bootstrap
 - Infra: K8S
 
-
 # Frontend
 
 Run the development server:
@@ -16,7 +15,6 @@ npm start
 ```
 
 Listening at <http://localhost:3000>
-
 
 # Services
 
@@ -83,9 +81,38 @@ Listening at <http://localhost:8000>
 # Docker
 
 ```bash
-docker build -t larturi/posts:0.0.1 .
+# Generate Image Comments Service
+cd blog-service-comments-node
+docker build -t larturi/comments:0.0.1 .
+docker push larturi/comments:0.0.1
 
-docker run -d --name blog-moderation-service larturi/posts:0.0.1
+# Generate Image Moderation Service
+cd blog-service-moderation-node
+docker build -t larturi/moderation:0.0.1 .
+docker push larturi/moderation:0.0.1
+
+# Generate Image Posts Service
+cd blog-service-posts-node
+docker build -t larturi/posts:0.0.1 .
+docker push larturi/posts:0.0.1
+
+# Generate Image Query Service
+cd blog-service-query-node
+docker build -t larturi/query:0.0.1 .
+docker push larturi/query:0.0.1
+
+# Generate Image Event Bus
+cd blog-event-bus-node
+docker build -t larturi/eventbus:0.0.1 .
+docker push larturi/eventbus:0.0.1
+
+# Deployments
+cd blog-infra-k8s/k8s
+kubectl apply -f comments-deploy.yaml
+kubectl apply -f moderation-deploy.yaml
+kubectl apply -f posts-deploy.yaml
+kubectl apply -f query-deploy.yaml
+kubectl apply -f eventbus-deploy.yaml
 ```
 
 ##### Made with ❤️ by Leandro Arturi
