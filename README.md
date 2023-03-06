@@ -83,28 +83,28 @@ Listening at <http://localhost:8000>
 ```bash
 # Generate Image Comments Service
 cd blog-service-comments-node
-docker build -t larturi/comments:0.0.1 .
-docker push larturi/comments:0.0.1
+docker build -t larturi/comments:latest .
+docker push larturi/comments:latest
 
 # Generate Image Moderation Service
 cd blog-service-moderation-node
-docker build -t larturi/moderation:0.0.1 .
-docker push larturi/moderation:0.0.1
+docker build -t larturi/moderation:latest .
+docker push larturi/moderation:latest
 
 # Generate Image Posts Service
 cd blog-service-posts-node
-docker build -t larturi/posts:0.0.1 .
-docker push larturi/posts:0.0.1
+docker build -t larturi/posts:latest .
+docker push larturi/posts:latest
 
 # Generate Image Query Service
 cd blog-service-query-node
-docker build -t larturi/query:0.0.1 .
-docker push larturi/query:0.0.1
+docker build -t larturi/query:latest .
+docker push larturi/query:latest
 
 # Generate Image Event Bus
 cd blog-event-bus-node
-docker build -t larturi/eventbus:0.0.1 .
-docker push larturi/eventbus:0.0.1
+docker build -t larturi/eventbus:latest .
+docker push larturi/eventbus:latest
 
 # Deployments
 cd blog-infra-k8s/k8s

@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: larturi/moderation:0.0.1
+          image: larturi/moderation:latest

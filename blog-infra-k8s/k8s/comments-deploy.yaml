@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: comments
-          image: larturi/comments:0.0.1
+          image: larturi/comments:latest
