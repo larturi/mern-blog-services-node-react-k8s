@@ -113,6 +113,9 @@ kubectl apply -f moderation-deploy.yaml
 kubectl apply -f posts-deploy.yaml
 kubectl apply -f query-deploy.yaml
 kubectl apply -f eventbus-deploy.yaml
+
+# Services
+kubectl apply -f posts-service.yaml
 ```
 
 ##### Made with ❤️ by Leandro Arturi
