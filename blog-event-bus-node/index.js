@@ -17,11 +17,11 @@ app.post('/events', (req, res) => {
     // Posts Service
     axios.post('http://posts-srv-cluster-ip:4000/events', event).catch(err => console.log);
     // Comments Service
-    // axios.post('http://localhost:4001/events', event).catch(err => console.log);    
+    axios.post('http://comments-srv:4001/events', event).catch(err => console.log);    
     // Query Service
-    // axios.post('http://localhost:4002/events', event).catch(err => console.log);
+    axios.post('http://query-srv:4002/events', event).catch(err => console.log);
     // Moderation Service
-    // axios.post('http://localhost:4003/events', event).catch(err => console.log);
+    axios.post('http://moderation-srv:4003/events', event).catch(err => console.log);
 
     res.send({ status: 'OK' });
 });
