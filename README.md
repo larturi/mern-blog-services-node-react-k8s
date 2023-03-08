@@ -116,6 +116,14 @@ kubectl apply -f eventbus-deploy.yaml
 
 # Services
 kubectl apply -f posts-service.yaml
+
+# Ingress
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f ingress-srv.yaml
+
+# Add in etc/hosts
+127.0.0.1 posts.com
+
 ```
 
 ##### Made with ❤️ by Leandro Arturi
