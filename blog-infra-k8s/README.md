@@ -2,19 +2,7 @@
 
 - Services: Node & Express
 - Frontend: React & Bootstrap
+- Infra: K8S
 
-<br />
-
-
-```bash
-minikube start
-
-kubectl apply -f posts-deploy.yaml
-
-kubectl get pods
-
-kubectl delete -f .
-
-```
 
 ##### Made with ❤️ by Leandro Arturi

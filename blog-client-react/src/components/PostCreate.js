@@ -9,7 +9,7 @@ const PostCreate = () => {
 
       if (title === '') return;
 
-      await axios.post(`${process.env.REACT_APP_SERVICE_POSTS_URL}/posts`, {
+      await axios.post(`${process.env.REACT_APP_SERVICE_POSTS_URL}/posts/create`, {
          title,
       });
 

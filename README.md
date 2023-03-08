@@ -81,6 +81,11 @@ Listening at <http://localhost:8000>
 # Docker
 
 ```bash
+# Generate Image Client React App
+cd blog-client-react
+docker build -t larturi/blog-client:latest .
+docker push larturi/blog-client:latest
+
 # Generate Image Comments Service
 cd blog-service-comments-node
 docker build -t larturi/comments:latest .
@@ -108,6 +113,7 @@ docker push larturi/eventbus:latest
 
 # Deployments
 cd blog-infra-k8s/k8s
+kubectl apply -f client-deploy.yaml
 kubectl apply -f comments-deploy.yaml
 kubectl apply -f moderation-deploy.yaml
 kubectl apply -f posts-deploy.yaml
