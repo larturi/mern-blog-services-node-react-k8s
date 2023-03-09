@@ -78,6 +78,14 @@ npm start
 
 Listening at <http://localhost:8000>
 
+# Skaffold
+
+To run all Kubernetes Objects (Services, Deployments and Pods) in Local run:
+
+```bash
+skaffold dev
+```
+
 # Docker
 
 ```bash
